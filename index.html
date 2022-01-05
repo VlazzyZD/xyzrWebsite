@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>xyzr |x| owns |x| you.</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/css-main.css">
+<link rel="stylesheet" href="css/css-cte.css">
+</head>
+<body>
+<div id="particles-container"></div>
+<audio controls hidden loop>
+<source src="assets/audio/song.mp3" type="audio/mpeg">
+</source></audio>
+<div id="content-container">
+<div class="center title topbar"><img class="emoji" src="images/images-seperator.png"> fukx xyzr <img class="emoji" src="images/images-seperator.png"></div>
+<span id="typing" class="center"></span>
+<div class="inline-container bottombar center">
+
+<pre style="display: inline-block;">|<div style="vertical-align: middle;" id="marquee"></div>|</pre>
+</div>
+</div>
+<script src="js/particles.js-particles.min.js"></script>
+<script src="js/particles.js-app.js"></script>
+<script src="js/js-cte.js"></script>
+<script src="js/js-jquery.min.js"></script>
+<script src="js/js-jquery.marquee.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    // var CTE = {};
+    CTE.callback = () => {
+      var aud = document.getElementsByTagName("audio")[0];
+      aud.volume = .3;
+      aud.play();
+
+      var typed = new Typed("#typing", {
+        strings: ["ez nuking kids", "bitch x", "romanian / english", "giveaways", "discord romanian server creator", "banned 6 times", "fxked u up"],
+        typeSpeed: 30,
+        backspeed: 20,
+        showCursor: false
+      });
+
+      var lines = ["we are x.y.z.r", "loved fv"];
+      for (var x = 0;x < lines.length;x++)
+        $("#marquee").append(`${lines[x]}${(x < lines.length - 1? ' <img class="emoji" src="/assets/images/seperator.png"> ' : '')}`);
+
+      $("#marquee").marquee({
+        duration: 7500,
+        gap: 100,
+        delayBeforeStart: 1000,
+        direction: 'left',
+      });
+    }
+    // CTE.callback();
+  </script>
+</body>
+</html>
